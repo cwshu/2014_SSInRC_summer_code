@@ -2,8 +2,8 @@
 using namespace std;
 
 int sum_of_array_even(int array[], int term){
-    // è¨ˆç®—é™£åˆ—ä¸­å¶æ•¸é …å’Œ, term è¡¨ç¤ºé™£åˆ—æœ‰å¹¾é …, è«‹ä½¿ç”¨éè¿´æ‰‹æ³•å®Œæˆ.
-    // å¶æ•¸é …: 2, 4, 6 ... é …ç‚º array[1], array[3], array[5] ... 
+    // ­pºâ°}¦C¤¤°¸¼Æ¶µ©M, term ªí¥Ü°}¦C¦³´X¶µ, ½Ğ¨Ï¥Î»¼°j¤âªk§¹¦¨.
+    // °¸¼Æ¶µ: 2, 4, 6 ... ¶µ¬° array[1], array[3], array[5] ... 
 }
 
 int main(){

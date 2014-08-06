@@ -8,7 +8,7 @@ void swap(int* a, int* b){
 }
 
 int gcd(int a, int b){
-    // è¨ˆç®— a, b çš„æœ€å¤§å…¬å› æ•¸.
+    // ­pºâ a, b ªº³Ì¤j¤½¦]¼Æ.
     if( a < b )
         swap(&a, &b);
 

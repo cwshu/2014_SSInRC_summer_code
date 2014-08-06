@@ -2,17 +2,17 @@
 using namespace std;
 
 const int MAX_TERM = 100;
-int fibonacci_data[MAX_TERM+1] = {0}; // dp_table åˆå§‹å€¼ 0.
+int fibonacci_data[MAX_TERM+1] = {0}; // dp_table ªì©l­È 0.
 
 int fibonacci_dp(int n){
-    // è¨ˆç®— fibonacci series ç¬¬ n é …å€¼
+    // ­pºâ fibonacci series ²Ä n ¶µ­È
     // fibonacci series: f(1) = 1, f(2) = 1, f(n) = f(n-1) + f(n-2)
     if( n == 1 || n == 2 )
         return 1;
-    else if(fibonacci_data[n] != 0) // dp_table ä¸ç‚ºåˆå§‹å€¼, ä»£è¡¨é€™é …ç®—éäº† => ç›´æ¥å–å€¼.
+    else if(fibonacci_data[n] != 0) // dp_table ¤£¬°ªì©l­È, ¥Nªí³o¶µºâ¹L¤F => ª½±µ¨ú­È.
         return fibonacci_data[n];
     else{
-        fibonacci_data[n] = fibonacci_dp(n-1) + fibonacci_dp(n-2); // æ­£å¸¸éè¿´è¨ˆç®—, ä¸¦æŠŠå€¼å­˜å…¥ dp_table.
+        fibonacci_data[n] = fibonacci_dp(n-1) + fibonacci_dp(n-2); // ¥¿±`»¼°j­pºâ, ¨Ã§â­È¦s¤J dp_table.
         return fibonacci_data[n];
     }
 }

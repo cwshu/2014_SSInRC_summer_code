@@ -2,7 +2,7 @@
 #include <cstdio>
 using namespace std;
 
-const int MAX_LAYER = 100; // Hanoi Tower æœ€å¤šå¹¾å±¤
+const int MAX_LAYER = 100; // Hanoi Tower ³Ì¦h´X¼h
 struct hanoi_tower{
     int rod[3][MAX_LAYER];
     int rod_height[3];

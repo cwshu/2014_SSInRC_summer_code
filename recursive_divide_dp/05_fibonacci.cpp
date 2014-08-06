@@ -2,7 +2,7 @@
 using namespace std;
 
 int fibonacci(int n){
-    // è¨ˆç®— fibonacci series ç¬¬ n é …å€¼
+    // ­pºâ fibonacci series ²Ä n ¶µ­È
     // fibonacci series: f(1) = 1, f(2) = 1, f(n) = f(n-1) + f(n-2)
     if( n == 1 || n == 2 )
         return 1;

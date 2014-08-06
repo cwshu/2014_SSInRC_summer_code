@@ -2,9 +2,9 @@
 using namespace std;
 
 int sum_of_array_even(int array[], int term){
-    // è¨ˆç®—é™£åˆ—ä¸­å¶æ•¸é …å’Œ, term è¡¨ç¤ºé™£åˆ—æœ‰å¹¾é …, è«‹ä½¿ç”¨éžè¿´æ‰‹æ³•å®Œæˆ.
-    // å¶æ•¸é …: 2, 4, 6 ... é …ç‚º array[1], array[3], array[5] ... 
-    term = term - (term % 2); // çµå°¾å¥‡æ•¸é …åŽ»æŽ‰. Quick Way: term = (term >> 1) << 1
+    // ­pºâ°}¦C¤¤°¸¼Æ¶µ©M, term ªí¥Ü°}¦C¦³´X¶µ, ½Ð¨Ï¥Î»¼°j¤âªk§¹¦¨.
+    // °¸¼Æ¶µ: 2, 4, 6 ... ¶µ¬° array[1], array[3], array[5] ... 
+    term = term - (term % 2); // µ²§À©_¼Æ¶µ¥h±¼. Quick Way: term = (term >> 1) << 1
     if( term < 2 )
         return 0;
     else if( term == 2 )

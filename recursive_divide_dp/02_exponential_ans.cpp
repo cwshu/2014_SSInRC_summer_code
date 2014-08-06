@@ -2,7 +2,7 @@
 using namespace std;
 
 int power(int base, int exp){
-    // æŒ‡æ•¸é‹ç®—, è¨ˆç®— base^exp, å…¶ä¸­ exp ç‚ºæ­£æ•´æ•¸, è«‹ä½¿ç”¨éè¿´æ‰‹æ³•å®Œæˆ.
+    // «ü¼Æ¹Bºâ, ­pºâ base^exp, ¨ä¤¤ exp ¬°¥¿¾ã¼Æ, ½Ğ¨Ï¥Î»¼°j¤âªk§¹¦¨.
     if( exp == 1 )
         return base;
     else

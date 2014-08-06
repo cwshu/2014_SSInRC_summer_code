@@ -10,17 +10,17 @@ void array_copy(int array1[], int array2[], int term){
 }
 
 void mergesort(int array[], int term){
-    // é¡§åæ€ç¾©, è«‹å¯¦åšåˆä½µæ’åºæ³•, array é …æ•¸ä¸è¶…é MAX_TERM.
+    // ÅU¦W«ä¸q, ½Ğ¹ê°µ¦X¨Ö±Æ§Çªk, array ¶µ¼Æ¤£¶W¹L MAX_TERM.
     int tmp_array[MAX_TERM] = {0};
 
-    if(term == 1) // èµ·å§‹æ¢ä»¶
+    if(term == 1) // °_©l±ø¥ó
         return;
 
-    // divide(åˆ†å‰²)
+    // divide(¤À³Î)
     mergesort(array, term/2);
     mergesort(&array[term/2], term - term/2);
 
-    // merge(åˆä½µ)
+    // merge(¦X¨Ö)
     int first_index = 0, second_index = term/2, merge_index = 0;
     while(first_index < term/2 && second_index < term){
         if( array[first_index] <= array[second_index] ){

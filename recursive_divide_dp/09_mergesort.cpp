@@ -4,7 +4,7 @@ using namespace std;
 const int MAX_TERM = 10000;
 
 void mergesort(int array[], int term){
-    // é¡§åæ€ç¾©, è«‹å¯¦åšåˆä½µæ’åºæ³•, array é …æ•¸ä¸è¶…é MAX_TERM.
+    // ÅU¦W«ä¸q, ½Ğ¹ê°µ¦X¨Ö±Æ§Çªk, array ¶µ¼Æ¤£¶W¹L MAX_TERM.
 }
 
 void print_array(int array[], int term){

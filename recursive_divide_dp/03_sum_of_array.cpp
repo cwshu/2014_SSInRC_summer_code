@@ -2,7 +2,7 @@
 using namespace std;
 
 int sum_of_array(int array[], int term){
-    // è¨ˆç®—é™£åˆ—ä¸­æ¯å€‹æ•¸å­—çš„å’Œ, term è¡¨ç¤ºé™£åˆ—æœ‰å¹¾é …
+    // ­pºâ°}¦C¤¤¨C­Ó¼Æ¦rªº©M, term ªí¥Ü°}¦C¦³´X¶µ
     if( term == 1 )
         return array[0];
     else
