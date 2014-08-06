@@ -14,17 +14,17 @@ void stackInit(struct stack* pThis){
     pThis->size = 0;
 }
 
-void push(struct stack* pThis, int data){
+void stackPush(struct stack* pThis, int data){
 // 把 data 加入 stack 裡.
     if( pThis->size >= 8 )
-        return; // 錯誤, stack 已滿, 無法再 push 資料進入.
+        return; // 錯誤, stack 已滿, 無法再 stackPush 資料進入.
 
     pThis->array[pThis->top] = data;
     pThis->top++;
     pThis->size++;
 }
 
-int pop(struct stack* pThis){
+int stackPop(struct stack* pThis){
 // 回傳並移出 stack 最上面的資料.
     if( pThis->size == 0 )
         return 0; // 錯誤, stack 為空.
@@ -35,7 +35,7 @@ int pop(struct stack* pThis){
     return data;
 }
 
-int top(struct stack* pThis){
+int stackTop(struct stack* pThis){
 // 回傳 stack 最上面的資料.
     if( pThis->size == 0 )
         return 0; // 錯誤, stack 為空.
@@ -43,7 +43,7 @@ int top(struct stack* pThis){
     return pThis->array[pThis->top - 1];
 }
 
-bool empty(struct stack* pThis){
+bool stackEmpty(struct stack* pThis){
 // 檢查 stack 是否為空.
     if( pThis->size == 0 )
         return true;
@@ -51,7 +51,7 @@ bool empty(struct stack* pThis){
     // Quick Way: return pThis->size == 0;
 }
 
-bool full(struct stack* pThis){
+bool stackFull(struct stack* pThis){
 // 檢查 stack 是否已滿.
     if( pThis->size == 8 )
         return true;
@@ -62,36 +62,36 @@ int main(){
     struct stack stack1;
     stackInit(&stack1);
 
-    cout << empty(&stack1) << endl; // true
-    cout << full(&stack1) << endl; // false
+    cout << stackEmpty(&stack1) << endl; // true
+    cout << stackFull(&stack1) << endl; // false
 
-    push(&stack1, 1);
-    cout << empty(&stack1) << endl; // false
-    cout << full(&stack1) << endl; // false
-    cout << top(&stack1) << endl; // 1
+    stackPush(&stack1, 1);
+    cout << stackEmpty(&stack1) << endl; // false
+    cout << stackFull(&stack1) << endl; // false
+    cout << stackTop(&stack1) << endl; // 1
 
-    push(&stack1, 2);
-    cout << empty(&stack1) << endl; // false
-    cout << full(&stack1) << endl; // false
-    cout << top(&stack1) << endl; // 2
+    stackPush(&stack1, 2);
+    cout << stackEmpty(&stack1) << endl; // false
+    cout << stackFull(&stack1) << endl; // false
+    cout << stackTop(&stack1) << endl; // 2
 
-    cout << pop(&stack1) << endl; // 2
+    cout << stackPop(&stack1) << endl; // 2
 
-    push(&stack1, 3);
-    cout << pop(&stack1) << endl; // 3
-    cout << pop(&stack1) << endl; // 1
-    cout << empty(&stack1) << endl; // true
+    stackPush(&stack1, 3);
+    cout << stackPop(&stack1) << endl; // 3
+    cout << stackPop(&stack1) << endl; // 1
+    cout << stackEmpty(&stack1) << endl; // true
 
-    push(&stack1, 4);
-    push(&stack1, 5);
-    cout << pop(&stack1) << endl; // 5
-    push(&stack1, 6);
-    push(&stack1, 7);
-    push(&stack1, 8);
-    cout << pop(&stack1) << endl; // 8
-    cout << pop(&stack1) << endl; // 7
-    push(&stack1, 9);
-    cout << pop(&stack1) << endl; // 9
-    cout << pop(&stack1) << endl; // 6
-    cout << pop(&stack1) << endl; // 4
+    stackPush(&stack1, 4);
+    stackPush(&stack1, 5);
+    cout << stackPop(&stack1) << endl; // 5
+    stackPush(&stack1, 6);
+    stackPush(&stack1, 7);
+    stackPush(&stack1, 8);
+    cout << stackPop(&stack1) << endl; // 8
+    cout << stackPop(&stack1) << endl; // 7
+    stackPush(&stack1, 9);
+    cout << stackPop(&stack1) << endl; // 9
+    cout << stackPop(&stack1) << endl; // 6
+    cout << stackPop(&stack1) << endl; // 4
 }

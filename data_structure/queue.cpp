@@ -27,15 +27,15 @@ int dequeue(struct queue* pThis){
 // 回傳並移出第一個插入 queue 的資料.
 }
 
-int first(struct queue* pThis){
+int queueFirst(struct queue* pThis){
 // 回傳第一個插入 queue 的資料.
 }
 
-bool empty(struct queue* pThis){
+bool queueEmpty(struct queue* pThis){
 // 檢查 queue 是否為空.
 }
 
-bool full(struct queue* pThis){
+bool queueFull(struct queue* pThis){
 // 檢查 queue 是否已滿.
 }
 
@@ -43,25 +43,25 @@ int main(){
     struct queue queue1;
     queueInit(&queue1);
 
-    cout << empty(&queue1) << endl; // true
-    cout << full(&queue1) << endl; // false
+    cout << queueEmpty(&queue1) << endl; // true
+    cout << queueFull(&queue1) << endl; // false
 
     enqueue(&queue1, 1);
-    cout << empty(&queue1) << endl; // false
-    cout << full(&queue1) << endl; // false
-    cout << first(&queue1) << endl; // 1
+    cout << queueEmpty(&queue1) << endl; // false
+    cout << queueFull(&queue1) << endl; // false
+    cout << queueFirst(&queue1) << endl; // 1
 
     enqueue(&queue1, 2);
-    cout << empty(&queue1) << endl; // false
-    cout << full(&queue1) << endl; // false
-    cout << first(&queue1) << endl; // 1
+    cout << queueEmpty(&queue1) << endl; // false
+    cout << queueFull(&queue1) << endl; // false
+    cout << queueFirst(&queue1) << endl; // 1
 
     cout << dequeue(&queue1) << endl; // 1
 
     enqueue(&queue1, 3);
     cout << dequeue(&queue1) << endl; // 2
     cout << dequeue(&queue1) << endl; // 3
-    cout << empty(&queue1) << endl; // true
+    cout << queueEmpty(&queue1) << endl; // true
 
     enqueue(&queue1, 4);
     enqueue(&queue1, 5);
