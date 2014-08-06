@@ -2,8 +2,8 @@
 using namespace std;
 
 struct queue {
-// å¯¦ä½œä¸€å€‹å¯ä»¥è™•ç† int å‹æ…‹è³‡æ–™çš„ queue, å®¹é‡ç‚º 8.
-/* å¯åƒè€ƒ
+// ¹ê§@¤@­Ó¥i¥H³B²z int «¬ºA¸ê®Æªº queue, ®e¶q¬° 8.
+/* ¥i°Ñ¦Ò
  * int circularArray[8];
  * int first, last;
  * int size;
@@ -11,8 +11,8 @@ struct queue {
 } globalQueue;
 
 void queueInit(){
-// åˆå§‹åŒ– queue.
-/* å¯åƒè€ƒ
+// ªì©l¤Æ queue.
+/* ¥i°Ñ¦Ò
  * globalQueue.first = 0;
  * globalQueue.last = 0;
  * globalQueue.size = 0;
@@ -20,23 +20,23 @@ void queueInit(){
 }
 
 void enqueue(int data){
-// æŠŠ data åŠ å…¥ queue è£¡.
+// §â data ¥[¤J queue ¸Ì.
 }
 
 int dequeue(){
-// å›å‚³ä¸¦ç§»å‡ºç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç¨Ã²¾¥X²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
 }
 
 int queueFirst(){
-// å›å‚³ç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
 }
 
 bool queueEmpty(){
-// æª¢æŸ¥ queue æ˜¯å¦ç‚ºç©º.
+// ÀË¬d queue ¬O§_¬°ªÅ.
 }
 
 bool queueFull(){
-// æª¢æŸ¥ queue æ˜¯å¦å·²æ»¿.
+// ÀË¬d queue ¬O§_¤wº¡.
 }
 
 int main(){

@@ -2,23 +2,23 @@
 using namespace std;
 
 struct queue {
-// å¯¦ä½œä¸€å€‹å¯ä»¥è™•ç† int å‹æ…‹è³‡æ–™çš„ queue, å®¹é‡ç‚º 8.
+// ¹ê§@¤@­Ó¥i¥H³B²z int «¬ºA¸ê®Æªº queue, ®e¶q¬° 8.
     int circularArray[8];
     int first, last;
     int size;
 };
 
 void queueInit(struct queue* pThis){
-// åˆå§‹åŒ– queue.
+// ªì©l¤Æ queue.
     pThis->first = 0;
     pThis->last = 0;
     pThis->size = 0;
 }
 
 void enqueue(struct queue* pThis, int data){
-// æŠŠ data åŠ å…¥ queue è£¡.
+// §â data ¥[¤J queue ¸Ì.
     if( pThis->size >= 8 )
-        return; // éŒ¯èª¤, queue å·²æ»¿, ç„¡æ³•å† push è³‡æ–™é€²å…¥.
+        return; // ¿ù»~, queue ¤wº¡, µLªk¦A push ¸ê®Æ¶i¤J.
 
     pThis->circularArray[pThis->last] = data;
     pThis->last = (pThis->last + 1) % 8;
@@ -26,9 +26,9 @@ void enqueue(struct queue* pThis, int data){
 }
 
 int dequeue(struct queue* pThis){
-// å›å‚³ä¸¦ç§»å‡ºç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç¨Ã²¾¥X²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
     if( pThis->size == 0 )
-        return 0; // éŒ¯èª¤, queue ç‚ºç©º.
+        return 0; // ¿ù»~, queue ¬°ªÅ.
 
     int data = pThis->circularArray[pThis->first];
     pThis->first = (pThis->first + 1) % 8;
@@ -37,22 +37,22 @@ int dequeue(struct queue* pThis){
 }
 
 int queueFirst(struct queue* pThis){
-// å›å‚³ç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
     if( pThis->size == 0 )
-        return 0; // éŒ¯èª¤, queue ç‚ºç©º.
+        return 0; // ¿ù»~, queue ¬°ªÅ.
 
     return pThis->circularArray[pThis->first];
 }
 
 bool queueEmpty(struct queue* pThis){
-// æª¢æŸ¥ queue æ˜¯å¦ç‚ºç©º.
+// ÀË¬d queue ¬O§_¬°ªÅ.
     if( pThis->size == 0 )
         return true;
     return false;
 }
 
 bool queueFull(struct queue* pThis){
-// æª¢æŸ¥ queue æ˜¯å¦å·²æ»¿.
+// ÀË¬d queue ¬O§_¤wº¡.
     if( pThis->size == 8 )
         return true;
     return false;

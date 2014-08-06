@@ -2,22 +2,22 @@
 using namespace std;
 
 struct stack {
-// å¯¦ä½œä¸€å€‹å¯ä»¥è™•ç† int å‹æ…‹è³‡æ–™çš„ stack, å®¹é‡ç‚º 8.
+// ¹ê§@¤@­Ó¥i¥H³B²z int «¬ºA¸ê®Æªº stack, ®e¶q¬° 8.
     int array[8];
     int top;
     int size;
 } globalStack;
 
 void stackInit(){
-// åˆå§‹åŒ– stack.
+// ªì©l¤Æ stack.
     globalStack.top = 0;
     globalStack.size = 0;
 }
 
 void stackPush(int data){
-// æŠŠ data åŠ å…¥ stack è£¡.
+// §â data ¥[¤J stack ¸Ì.
     if( globalStack.size >= 8 )
-        return; // éŒ¯èª¤, stack å·²æ»¿, ç„¡æ³•å† stackPush è³‡æ–™é€²å…¥.
+        return; // ¿ù»~, stack ¤wº¡, µLªk¦A stackPush ¸ê®Æ¶i¤J.
 
     globalStack.array[globalStack.top] = data;
     globalStack.top++;
@@ -25,9 +25,9 @@ void stackPush(int data){
 }
 
 int stackPop(){
-// å›å‚³ä¸¦ç§»å‡º stack æœ€ä¸Šé¢çš„è³‡æ–™.
+// ¦^¶Ç¨Ã²¾¥X stack ³Ì¤W­±ªº¸ê®Æ.
     if( globalStack.size == 0 )
-        return 0; // éŒ¯èª¤, stack ç‚ºç©º.
+        return 0; // ¿ù»~, stack ¬°ªÅ.
 
     int data = globalStack.array[globalStack.top - 1];
     globalStack.top--;
@@ -36,15 +36,15 @@ int stackPop(){
 }
 
 int stackTop(){
-// å›å‚³ stack æœ€ä¸Šé¢çš„è³‡æ–™.
+// ¦^¶Ç stack ³Ì¤W­±ªº¸ê®Æ.
     if( globalStack.size == 0 )
-        return 0; // éŒ¯èª¤, stack ç‚ºç©º.
+        return 0; // ¿ù»~, stack ¬°ªÅ.
 
     return globalStack.array[globalStack.top - 1];
 }
 
 bool stackEmpty(){
-// æª¢æŸ¥ stack æ˜¯å¦ç‚ºç©º.
+// ÀË¬d stack ¬O§_¬°ªÅ.
     if( globalStack.size == 0 )
         return true;
     return false;
@@ -52,7 +52,7 @@ bool stackEmpty(){
 }
 
 bool stackFull(){
-// æª¢æŸ¥ stack æ˜¯å¦å·²æ»¿.
+// ÀË¬d stack ¬O§_¤wº¡.
     if( globalStack.size == 8 )
         return true;
     return false;

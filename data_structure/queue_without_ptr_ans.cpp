@@ -2,23 +2,23 @@
 using namespace std;
 
 struct queue {
-// å¯¦ä½œä¸€å€‹å¯ä»¥è™•ç† int å‹æ…‹è³‡æ–™çš„ queue, å®¹é‡ç‚º 8.
+// ¹ê§@¤@­Ó¥i¥H³B²z int «¬ºA¸ê®Æªº queue, ®e¶q¬° 8.
     int circularArray[8];
     int first, last;
     int size;
 } globalQueue;
 
 void queueInit(){
-// åˆå§‹åŒ– queue.
+// ªì©l¤Æ queue.
     globalQueue.first = 0;
     globalQueue.last = 0;
     globalQueue.size = 0;
 }
 
 void enqueue(int data){
-// æŠŠ data åŠ å…¥ queue è£¡.
+// §â data ¥[¤J queue ¸Ì.
     if( globalQueue.size >= 8 )
-        return; // éŒ¯èª¤, queue å·²æ»¿, ç„¡æ³•å† push è³‡æ–™é€²å…¥.
+        return; // ¿ù»~, queue ¤wº¡, µLªk¦A push ¸ê®Æ¶i¤J.
 
     globalQueue.circularArray[globalQueue.last] = data;
     globalQueue.last = (globalQueue.last + 1) % 8;
@@ -26,9 +26,9 @@ void enqueue(int data){
 }
 
 int dequeue(){
-// å›å‚³ä¸¦ç§»å‡ºç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç¨Ã²¾¥X²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
     if( globalQueue.size == 0 )
-        return 0; // éŒ¯èª¤, queue ç‚ºç©º.
+        return 0; // ¿ù»~, queue ¬°ªÅ.
 
     int data = globalQueue.circularArray[globalQueue.first];
     globalQueue.first = (globalQueue.first + 1) % 8;
@@ -37,22 +37,22 @@ int dequeue(){
 }
 
 int queueFirst(){
-// å›å‚³ç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
     if( globalQueue.size == 0 )
-        return 0; // éŒ¯èª¤, queue ç‚ºç©º.
+        return 0; // ¿ù»~, queue ¬°ªÅ.
 
     return globalQueue.circularArray[globalQueue.first];
 }
 
 bool queueEmpty(){
-// æª¢æŸ¥ queue æ˜¯å¦ç‚ºç©º.
+// ÀË¬d queue ¬O§_¬°ªÅ.
     if( globalQueue.size == 0 )
         return true;
     return false;
 }
 
 bool queueFull(){
-// æª¢æŸ¥ queue æ˜¯å¦å·²æ»¿.
+// ÀË¬d queue ¬O§_¤wº¡.
     if( globalQueue.size == 8 )
         return true;
     return false;

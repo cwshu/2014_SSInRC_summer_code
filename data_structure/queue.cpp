@@ -2,8 +2,8 @@
 using namespace std;
 
 struct queue {
-// å¯¦ä½œä¸€å€‹å¯ä»¥è™•ç† int å‹æ…‹è³‡æ–™çš„ queue, å®¹é‡ç‚º 8.
-/* å¯åƒè€ƒ
+// ¹ê§@¤@­Ó¥i¥H³B²z int «¬ºA¸ê®Æªº queue, ®e¶q¬° 8.
+/* ¥i°Ñ¦Ò
  * int circularArray[8];
  * int first, last;
  * int size;
@@ -11,8 +11,8 @@ struct queue {
 };
 
 void queueInit(struct queue* pThis){
-// åˆå§‹åŒ– queue.
-/* å¯åƒè€ƒ
+// ªì©l¤Æ queue.
+/* ¥i°Ñ¦Ò
  * pThis->first = 0;
  * pThis->last = 0;
  * pThis->size = 0;
@@ -20,23 +20,23 @@ void queueInit(struct queue* pThis){
 }
 
 void enqueue(struct queue* pThis, int data){
-// æŠŠ data åŠ å…¥ queue è£¡.
+// §â data ¥[¤J queue ¸Ì.
 }
 
 int dequeue(struct queue* pThis){
-// å›å‚³ä¸¦ç§»å‡ºç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç¨Ã²¾¥X²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
 }
 
 int queueFirst(struct queue* pThis){
-// å›å‚³ç¬¬ä¸€å€‹æ’å…¥ queue çš„è³‡æ–™.
+// ¦^¶Ç²Ä¤@­Ó´¡¤J queue ªº¸ê®Æ.
 }
 
 bool queueEmpty(struct queue* pThis){
-// æª¢æŸ¥ queue æ˜¯å¦ç‚ºç©º.
+// ÀË¬d queue ¬O§_¬°ªÅ.
 }
 
 bool queueFull(struct queue* pThis){
-// æª¢æŸ¥ queue æ˜¯å¦å·²æ»¿.
+// ÀË¬d queue ¬O§_¤wº¡.
 }
 
 int main(){
@@ -78,9 +78,9 @@ int main(){
 }
 
 /* Learn More
- *  1. é€šå¸¸å®‰å…¨çš„è³‡æ–™çµæ§‹æœƒåšéŒ¯èª¤è™•ç†, æ¯”å¦‚èªª queue æ»¿çš„æ™‚å€™, enqueue å‡½å¼æœƒç”¨å›å‚³å€¼å‘Šè¨´ä½  queue æ»¿äº†.
- *  2. queue å¤§å°çš„ç¯„ç”¨æ€§.
- *      i. é€šå¸¸æœƒæœ‰å€‹å‡½å¼è®“ä½ è¨­å®š queue çš„å¤§å°, æˆ–æ˜¯ç›´æ¥åœ¨ queue çš„åˆå§‹åŒ–å‡½å¼æ±ºå®š.
- *      ii. æ›´é€²éš: queue ä½¿ç”¨å‹•æ…‹å¤§å° (ç¨‹å¼åŸ·è¡ŒæœŸé–“æ±ºå®šå¤§å°).
- *  3. å‡½å¼åº«æ”¯æ´: c++ std::deque.
+ *  1. ³q±`¦w¥şªº¸ê®Æµ²ºc·|°µ¿ù»~³B²z, ¤ñ¦p»¡ queue º¡ªº®É­Ô, enqueue ¨ç¦¡·|¥Î¦^¶Ç­È§i¶D§A queue º¡¤F.
+ *  2. queue ¤j¤pªº½d¥Î©Ê.
+ *      i. ³q±`·|¦³­Ó¨ç¦¡Åı§A³]©w queue ªº¤j¤p, ©Î¬Oª½±µ¦b queue ªºªì©l¤Æ¨ç¦¡¨M©w.
+ *      ii. §ó¶i¶¥: queue ¨Ï¥Î°ÊºA¤j¤p (µ{¦¡°õ¦æ´Á¶¡¨M©w¤j¤p).
+ *  3. ¨ç¦¡®w¤ä´©: c++ std::deque.
  */
