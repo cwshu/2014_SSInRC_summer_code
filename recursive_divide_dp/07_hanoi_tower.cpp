@@ -3,11 +3,10 @@
 using namespace std;
 
 const int MAX_LAYER = 100; // Hanoi Tower 最多幾層
-struct hanoi_tower{
-    int rod[3][MAX_LAYER];
-    int rod_height[3];
-    int layer;
-} tower;
+
+// Hanoi Tower Data
+int rod[3][MAX_LAYER];
+int rod_height[3];
 
 void hanoi_init(int layer);
 void hanoi_move_tower(int layer);
@@ -17,17 +16,18 @@ void print_hanoi_tower();
 
 int main(){
     hanoi_init(8);
+    print_hanoi_tower();
+    getchar();
     hanoi_move_tower(8);
 }
 
 // function implementation
 void hanoi_init(int layer){
-    tower.layer = layer;
-    tower.rod_height[0] = tower.layer;
-    tower.rod_height[1] = tower.rod_height[2] = 0;
+    rod_height[0] = layer;
+    rod_height[1] = rod_height[2] = 0;
 
     for(int i=0; i<layer; i++){
-        tower.rod[0][i] = 8 - i; // 8 ~ 1
+        rod[0][i] = 8 - i; // 8 ~ 1
     }
 }
 
@@ -48,14 +48,14 @@ void _hanoi_move_tower(int layer, int start_rod, int end_rod){
 }
 
 void hanoi_single_move(int start_rod, int end_rod){
-    if(tower.rod_height[start_rod] < 1){
+    if(rod_height[start_rod] < 1){
         cout << "Error: move empty rod" << endl;
         return;
     }
-    int move_disk = tower.rod[start_rod][ tower.rod_height[start_rod] - 1 ];
-    tower.rod_height[start_rod]--;
-    tower.rod[end_rod][ tower.rod_height[end_rod] ] = move_disk;
-    tower.rod_height[end_rod]++;
+    int move_disk = rod[start_rod][ rod_height[start_rod] - 1 ];
+    rod_height[start_rod]--;
+    rod[end_rod][ rod_height[end_rod] ] = move_disk;
+    rod_height[end_rod]++;
 
     print_hanoi_tower();
     getchar();
@@ -65,10 +65,10 @@ void print_hanoi_tower(){
     const char rod_name[3] = {'a', 'b', 'c'};
     for(int i=0; i<3; i++){
         cout << rod_name[i] << ": ";
-        for(int j=0; j<tower.rod_height[i]; j++){
+        for(int j=0; j<rod_height[i]; j++){
             if( j != 0 )
                 cout << ", ";
-            cout << tower.rod[i][j];
+            cout << rod[i][j];
         }
         cout << endl;
     }
